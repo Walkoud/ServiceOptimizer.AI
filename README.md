@@ -1,6 +1,6 @@
 # 🤖 ServiceOptimizer.AI
 
-AI-driven Windows Service Optimizer. Analyze system services via AI to kill background processes and lower input lag.
+Stop guessing in services.msc. Use AI to safely debloat Windows, disable telemetry, and reclaim system resources for peak performance in gaming and productivity.
 
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
@@ -87,4 +87,5 @@ MIT License - See [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ to optimize your Windows PC**
+
 
