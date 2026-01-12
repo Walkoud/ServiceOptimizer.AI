@@ -3,6 +3,10 @@
 Stop guessing in services.msc. Use AI to safely debloat Windows, disable telemetry, and reclaim system resources for peak performance. 
 This tool identifies exactly which services to tweak and explains the "why" behind every recommendation
 
+
+A **PowerShell tool** that lists all **Windows services**, generates **AI-based recommendations** for enabling or disabling them (using ChatGPT/Claude), and lets you **view, compare, and apply** these suggestions more easily than `services.msc`. It’s a decision-support tool for Windows service optimization, not a fully autonomous optimizer.
+<br><br>
+
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -89,6 +93,7 @@ MIT License - See [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ to optimize your Windows PC**
+
 
 
 
