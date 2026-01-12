@@ -41,19 +41,9 @@ foreach ($file in $Files) {
 }
 
 Write-Host ""
-Write-Host "Installation complete!" -ForegroundColor Green
-Write-Host ""
-Write-Host "To run ServiceOptimizer.AI, execute:" -ForegroundColor Cyan
-Write-Host "  cd '$InstallDir'" -ForegroundColor White
-Write-Host "  .\index.ps1" -ForegroundColor White
-Write-Host ""
-Write-Host "Or create a shortcut to:" -ForegroundColor Cyan
-Write-Host "  powershell.exe -ExecutionPolicy Bypass -File `"$InstallDir\index.ps1`"" -ForegroundColor White
+Write-Host "Installation complete! Launching ServiceOptimizer.AI..." -ForegroundColor Green
 Write-Host ""
 
-# Ask if user wants to run now
-$runNow = Read-Host "Do you want to run ServiceOptimizer.AI now? (Y/N)"
-if ($runNow -eq "Y" -or $runNow -eq "y") {
-    Set-Location $InstallDir
-    & "$InstallDir\index.ps1"
-}
+# Launch directly
+Set-Location $InstallDir
+& "$InstallDir\index.ps1"
