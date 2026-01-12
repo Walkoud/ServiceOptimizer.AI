@@ -1,6 +1,7 @@
 # 🤖 ServiceOptimizer.AI
 
-Stop guessing in services.msc. Use AI to safely debloat Windows, disable telemetry, and reclaim system resources for peak performance in gaming and productivity.
+Stop guessing in services.msc. Use AI to safely debloat Windows, disable telemetry, and reclaim system resources for peak performance. 
+This tool identifies exactly which services to tweak and explains the "why" behind every recommendation
 
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
@@ -88,6 +89,7 @@ MIT License - See [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ to optimize your Windows PC**
+
 
 
 
