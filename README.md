@@ -6,6 +6,7 @@ Stop guessing in services.msc. Use AI to safely debloat Windows, disable telemet
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+<img width="927" height="593" alt="image" src="https://github.com/user-attachments/assets/dde221ad-cd1c-4019-8107-4587c1e2a2fd" />
 <img width="886" height="843" alt="image" src="https://github.com/user-attachments/assets/719cc1f0-9a7f-48fd-9483-1ffd00f5262f" />
 
 
@@ -87,5 +88,6 @@ MIT License - See [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ to optimize your Windows PC**
+
 
 
