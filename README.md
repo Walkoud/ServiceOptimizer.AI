@@ -6,6 +6,9 @@ AI-driven Windows Service Optimizer. Analyze system services via AI to kill back
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+<img width="886" height="843" alt="image" src="https://github.com/user-attachments/assets/719cc1f0-9a7f-48fd-9483-1ffd00f5262f" />
+
+
 ## 🚀 Quick Installation
 
 ### One-Line Installation
@@ -36,6 +39,8 @@ This will download all files and launch the app automatically.
 - **⚙️ Options**: Exclude Xbox/Store services
 
 ## 📖 How It Works
+
+![brave_82ArJ9lCht](https://github.com/user-attachments/assets/36d98353-8a3f-4f76-b4ff-7e99c88cdb9e)
 
 1. **Generate prompt** → Click "GENERATE AI PROMPT" (copies to clipboard)
 2. **Get AI recommendations** → Paste in ChatGPT/Claude, get JSON response
@@ -82,3 +87,4 @@ MIT License - See [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ to optimize your Windows PC**
+
