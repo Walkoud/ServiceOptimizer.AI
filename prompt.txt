@@ -1,0 +1,22 @@
+{{PromptIntro}}
+Generate ONLY a valid JSON array. 
+{{PromptRule}}
+For each service that STILL NEEDS optimization, provide:
+- 'Name': (service name)
+- 'Display': (display name)
+- 'Current_Startup': (current startup type)
+- 'Current_State': (current status)
+- 'Recommended_Startup': ('Automatic', 'Manual', or 'Disabled')
+- 'Recommended_State': ('Running' or 'Stopped')
+- 'Reason': (Short explanation {{PromptLang}})
+
+Guidelines:
+1. Target: OEM bloatware (Gigabyte, Razer, etc.), unused VPN/Network services, and non-essential background tasks.
+2. If a service is essential for Windows stability or Xbox/Gaming features, do NOT include it UNLESS I explicitly excluded it below.
+3. Output ONLY the raw JSON array. No conversational text.
+
+List:
+{{ServiceList}}
+{{XboxNote}}
+{{StoreNote}}
+{{CustomNote}}
