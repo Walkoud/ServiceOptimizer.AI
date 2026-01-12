@@ -69,6 +69,39 @@ Write-Host "ServiceOptimizer.AI - AI-driven Windows Service Optimizer" -Foregrou
 Write-Host "Created by Walkoud | GitHub: https://github.com/Walkoud/ServiceOptimizer.AI" -ForegroundColor Gray
 Write-Host ""
 
+# --- Vérification des droits administrateur ---
+if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "ServiceOptimizer.AI doit être exécuté en tant qu'Administrateur. Tentative de relancement..." -ForegroundColor Yellow
+    $argList = @()
+
+    $PSBoundParameters.GetEnumerator() | ForEach-Object {
+        $argList += if ($_.Value -is [switch] -and $_.Value) {
+            "-$($_.Key)"
+        } elseif ($_.Value -is [array]) {
+            "-$($_.Key) $($_.Value -join ',')"
+        } elseif ($_.Value) {
+            "-$($_.Key) '$($_.Value)'"
+        }
+    }
+
+    $script = if ($PSCommandPath) {
+        "& { & `'$($PSCommandPath)`' $($argList -join ' ') }"
+    } else {
+        "&([ScriptBlock]::Create((irm https://github.com/Walkoud/ServiceOptimizer.AI/main/index.ps1))) $($argList -join ' ')"
+    }
+
+    $powershellCmd = if (Get-Command pwsh -ErrorAction SilentlyContinue) { "pwsh" } else { "powershell" }
+    $processCmd = if (Get-Command wt.exe -ErrorAction SilentlyContinue) { "wt.exe" } else { "$powershellCmd" }
+
+    if ($processCmd -eq "wt.exe") {
+        Start-Process $processCmd -ArgumentList "$powershellCmd -ExecutionPolicy Bypass -NoProfile -Command `"$script`"" -Verb RunAs
+    } else {
+        Start-Process $processCmd -ArgumentList "-ExecutionPolicy Bypass -NoProfile -Command `"$script`"" -Verb RunAs
+    }
+
+    exit
+}
+
 # --- Chargement des dépendances ---
 Add-Type -AssemblyName PresentationFramework
 Add-Type -AssemblyName System.Windows.Forms
